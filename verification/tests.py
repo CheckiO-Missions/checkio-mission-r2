@@ -11,14 +11,19 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": [['p1', 'p1', 'p1', 'p3', 'p4']],
+            "answer": False,
+            "explanation": 'Incorrect number of arguments'
         },
         {
             "input": [5, 7],
             "answer": 12,
             "explanation": "5+7=?"
+        },
+        {
+            "input": [['p1', 'p1', 'p1', 'p3', 'p4']],
+            "answer": False,
+            "explanation": 'Incorrect number of arguments'
         },
     ],
     "Extra": [
