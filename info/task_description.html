@@ -1,42 +1,42 @@
-<!-- Describe task in general -->
+<p>The second part of the series dedicated to the Japanese game "<a href="https://en.wikipedia.org/wiki/Japanese_mahjong ">riichi mahjong</a>". It's a little more complicated than the previous one.</p>
+
+<p>Your task is to check if the hand is a winning one. If in the previous mission you were given a ready-made hand, then in this one there will be just a set of tiles in the input data, which may not be victorious.</p>
+
+<p>Let me remind you of the conditions of victory.</p>
+
+<ul>
+ <li>There should be exactly 14 tiles in the hand.</li>
+ <li>The hand must contain four sets (pona or chi) and one pair.</li>
+</ul>
+
+<p>In this mission, the second argument of the function is added — a list of so-called <i>open sets.</i> Such a set in the game is created by taking away a tile that the opponent discarded as unnecessary. The set that was supplemented with this tile is put aside and does not change anymore. Note that pairs cannot be open.</p>
+
+<p>Each of the open sets needs to be checked whether it is valid or not. For example, 's456' is a valid set, and 'm124' or 'p11' is invalid.</p>
+
+<p>One more note: there are exceptions to the second victory condition. There are two types of hands that can be winning and at the same time not contain four sets and a pair (in a real game, these hands are quite rare). Here they are:</p>
+<ul>
+ <li><i>Chitoisu.</i>Hand, that contains seven pairs. For example:</li>
+<pre class="brush: python">
+        ['p1', 'p1', 'p5', 'p5', 'm2', 'm2', 'm6', 'm6', 's3', 's3', 's9', 's9', 'ww', 'ww']
+    </pre>
+    <p>Note, that there should not be two identical pairs in the hand.</p>
+ <li><i>Kokushi-muso.</i>Hand, that have one and nine from each of the suits, each of the dragons, each of the winds, and a pair to any of these tiles. For example:</li>
+<pre class="brush: python">
+        ['m1', 'm9', 'p1', 'p1', 'p9', 's1', 's9', 'wn', 'we', 'ws', 'ww', 'dg', 'dr', 'dw']
+    </pre>
+</ul>
 
 <p>
-    Sum two passed ints  
-</p>
-
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
-</p>
-
-<!-- Explain input and output values -->
-<p>
-    <strong>Input:</strong> Two arguments. Both are ints.
+    <strong>Input data: </strong> Two arguments of the list type: the first is strings encoding tiles, the second is strings encoding open sets (may be empty).
 </p>
 
 <p>
-    <strong>Output:</strong> Int. 
+    <strong>Output data: </strong> One argument of the bool type: the answer to the question "is the hand ready?".
 </p>
 
-
-<p>
-    <strong>Examples:</strong>
+<p> 
+    <strong>Example: </strong>
 </p>
-
-<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
-
-<!-- Here you can explain how it can be used in development -->
-<!-- The section is optional -->
-<p class="for_info_only">
-
-    <strong>How it’s used:</strong>
-    <i>(math is used everywhere)</i>
-</p>
-
-<!-- Here you can explain some constraints for input-->
-<!-- The section is optional -->
-<p>
-    <strong>Preconditions:</strong>
-    <ul>
-    <li><i>both given ints should be between -1000 and 1000</i></li>
-    </ul>
-</p>
+<pre class="brush: python">
+    riichi_mahjong_win_hand(['m1', 'm2', 'm3', 'm5', 'm5', 'p2', 'p3', 'p4', 'p7', 'p8', 'p9'], ['s456']) == True
+</pre>
