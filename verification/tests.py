@@ -63,7 +63,7 @@ TESTS = {
             "explanation": 'How many ways are there to break this hand into sets?...'
         },
         {
-            "input": [['p1', 's1', 's8', 's7', 's9', 'p1', 's5', 's4', 's6', 's3', 's2']['weeg']],
+            "input": [['p1', 's1', 's8', 's7', 's9', 'p1', 's5', 's4', 's6', 's3', 's2'], ['weeg']],
             "answer": False,
             "explanation": 'Incorrect open set. Absolutely incorrect.'
         },
