@@ -13,7 +13,7 @@ TESTS = {
         {
             "input": [['p1', 'p1', 'p3', 'p1', 'p4'], []],
             "answer": False,
-            "explanation": 'Incorrect number of arguments'
+            "explanation": 'Incorrect number of tiles'
         },
         {
             "input": [['s4', 's3', 's2', 's8', 's4', 's1', 's5', 's6', 's5', 's4', 's7', 's9', 's6', 's6'], []],
