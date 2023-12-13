@@ -11,17 +11,17 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": [['p1', 'p1', 'p3', 'p1', 'p4']],
+            "input": [['p1', 'p1', 'p3', 'p1', 'p4'], []],
             "answer": False,
             "explanation": 'Incorrect number of arguments'
         },
         {
-            "input": [['s4', 's3', 's2', 's8', 's4', 's1', 's5', 's6', 's5', 's4', 's7', 's9', 's6', 's6']],
+            "input": [['s4', 's3', 's2', 's8', 's4', 's1', 's5', 's6', 's5', 's4', 's7', 's9', 's6', 's6'], []],
             "answer": True,
             "explanation": 'No, this is right hand!'
         },
         {
-            "input": [['s9', 'p1', 'p1', 'm8', 'dw', 'dw', 'p8', 'm9', 'p7', 'p9', 's9', 'p1', 's9', 'm6']],
+            "input": [['s9', 'p1', 'p1', 'm8', 'dw', 'dw', 'p8', 'm9', 'p7', 'p9', 's9', 'p1', 's9', 'm6'], []],
             "answer": False,
             "explanation": "There mustn't be alone tiles!"
         },
@@ -36,19 +36,19 @@ TESTS = {
             "explanation": "Pair can't be open"
         },
         {
-            "input": [['s9', 'm2', 's9', 'p1', 'm6', 's3', 'm6', 'p5', 'm2', 'ww', 'ww', 'p1', 's3', 'p5']],
+            "input": [['s9', 'm2', 's9', 'p1', 'm6', 's3', 'm6', 'p5', 'm2', 'ww', 'ww', 'p1', 's3', 'p5'], []],
             "answer": False,
             "explanation": 'Yes, this is chitoisu!'
         }
     ],
     "Extra": [
         {
-            "input": [['m6', 's7', 'm2', 's6', 'm2', 's3', 'p1', 's6', 's7', 's3', 'm6', 'p1', 'p1', 'p1']],
+            "input": [['m6', 's7', 'm2', 's6', 'm2', 's3', 'p1', 's6', 's7', 's3', 'm6', 'p1', 'p1', 'p1'], []],
             "answer": False,
             "explanation": 'Two identical pairs in the chitoisu...'
         },
         {
-            "input": [['s9', 'wn', 's9', 's1', 'dw', 'we', 'p1', 'm1', 'p9', 'dg', 'm9', 'dr', 'ws', 'ww']],
+            "input": [['s9', 'wn', 's9', 's1', 'dw', 'we', 'p1', 'm1', 'p9', 'dg', 'm9', 'dr', 'ws', 'ww'], []],
             "answer": True,
             "explanation": 'Kokushi-muso'
         },
@@ -58,7 +58,7 @@ TESTS = {
             "explanation": 'No, this is not kokushi'
         },
         {
-            "input": [['p1', 'p1', 'p5', 'p2', 'p5', 'p1', 'p4', 'p4', 'p3', 'p3', 'p4', 'p3', 'p2', 'p2']],
+            "input": [['p1', 'p1', 'p5', 'p2', 'p5', 'p1', 'p4', 'p4', 'p3', 'p3', 'p4', 'p3', 'p2', 'p2'], []],
             "answer": True,
             "explanation": 'How many ways are there to break this hand into sets?...'
         },
