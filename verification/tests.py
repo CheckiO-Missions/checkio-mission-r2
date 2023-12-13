@@ -78,7 +78,7 @@ TESTS = {
             "explanation": 'Two many same tiles.'
         },
         {
-            "input": [['s9', 'p1', 's7', 's8', 's6', 's3', 's1', 'p1', 's5', 's2', 's4'] ['p1111']],
+            "input": [['s9', 'p1', 's7', 's8', 's6', 's3', 's1', 'p1', 's5', 's2', 's4'], ['p1111']],
             "answer": False,
             "explanation": 'Incorrect open set 2'
         },
