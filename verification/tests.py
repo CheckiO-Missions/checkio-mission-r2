@@ -11,89 +11,89 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": [['p1', 'p1', 'p1', 'p3', 'p4']],
+            "input": [['p1', 'p1', 'p3', 'p1', 'p4']],
             "answer": False,
             "explanation": 'Incorrect number of arguments'
         },
         {
-            "input": [['s1', 's2', 's3', 's4', 's4', 's4', 's5', 's5', 's6', 's6', 's6', 's7', 's8', 's9']],
+            "input": [['s4', 's3', 's2', 's8', 's4', 's1', 's5', 's6', 's5', 's4', 's7', 's9', 's6', 's6']],
             "answer": True,
             "explanation": 'No, this is right hand!'
         },
         {
-            "input": [['m6', 'm8', 'm9', 'p1', 'p1', 'p1', 'p7', 'p8', 'p9', 's9', 's9', 's9', 'dw', 'dw']],
+            "input": [['s9', 'p1', 'p1', 'm8', 'dw', 'dw', 'p8', 'm9', 'p7', 'p9', 's9', 'p1', 's9', 'm6']],
             "answer": False,
             "explanation": 'There mustn't be alone tiles!'
         },
         {
-            "input": [['m6', 'm8', 'm9', 'p1', 'p1', 'p1', 'p7', 'p8', 'p9', 'dw', 'dw'], ['s999']],
+            "input": [['dw', 'p7', 'p9', 'dw', 'm6', 'p8', 'm8', 'p1', 'p1', 'p1', 'm9'], ['s999']],
             "answer": True,
             "explanation": 'Right hand'
         },
         {
-            "input": [['m6', 'm8', 'm9', 'p1', 'p1', 'p1', 'p7', 'p8', 'p9'], ['s999', 'dww']],
+            "input": [['p1', 'p9', 'p1', 'p8', 'p1', 'm8', 'm7', 'p7', 'm9'], ['s999', 'dww']],
             "answer": False,
             "explanation": 'Pair can't be open'
         },
         {
-            "input": [['p1', 'p1', 'p5', 'p5', 'm2', 'm2', 'm6', 'm6', 's3', 's3', 's9', 's9', 'ww', 'ww']],
+            "input": [['s9', 'm2', 's9', 'p1', 'm6', 's3', 'm6', 'p5', 'm2', 'ww', 'ww', 'p1', 's3', 'p5']],
             "answer": False,
             "explanation": 'Yes, this is chitoisu!'
         }
     ],
     "Extra": [
         {
-            "input": [['p1', 'p1', 'p1', 'p1', 'm2', 'm2', 'm6', 'm6', 's3', 's3', 's6', 's6', 's7', 's7']],
+            "input": [['m6', 's7', 'm2', 's6', 'm2', 's3', 'p1', 's6', 's7', 's3', 'm6', 'p1', 'p1', 'p1']],
             "answer": False,
             "explanation": 'Two identical pairs in the chitoisu...'
         },
         {
-            "input": [['p1', 'p9', 's1', 's9', 'm1', 'm9', 'dw', 'dg', 'dr', 'ww', 'we', 'ws', 'wn', 's9'],
+            "input": [['s9', 'wn', 's9', 's1', 'dw', 'we', 'p1', 'm1', 'p9', 'dg', 'm9', 'dr', 'ws', 'ww']],
             "answer": True,
             "explanation": 'Kokushi-muso'
         },
         {
-            "input": [['p1', 'p9', 's1', 's9', 'm1', 'm9', 'ww', 'we', 'ws', 'wn'], ['dwrg']],
+            "input": [['p9', 's9', 'p1', 'ww', 'ws', 'm9', 's1', 'we', 'm1', 'wn'], ['dwrg']],
             "answer": False,
             "explanation": 'No, this is not kokushi'
         },
         {
-            "input": [['p1', 'p1', 'p1', 'p2', 'p2', 'p2', 'p3', 'p3', 'p3', 'p4', 'p4', 'p4', 'p5', 'p5']],
+            "input": [['p1', 'p1', 'p5', 'p2', 'p5', 'p1', 'p4', 'p4', 'p3', 'p3', 'p4', 'p3', 'p2', 'p2']],
             "answer": True,
             "explanation": 'How many ways are there to break this hand into sets?...'
         },
         {
-            "input": [['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 'p1', 'p1']['weeg']],
+            "input": [['p1', 's1', 's8', 's7', 's9', 'p1', 's5', 's4', 's6', 's3', 's2']['weeg']],
             "answer": False,
             "explanation": 'Incorrect open set. Absolutely incorrect.'
         },
         {
-            "input": [['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 'p1', 'p1'], ['p222']],
+            "input": [['p1', 'p1', 's7', 's1', 's6', 's9', 's8', 's5', 's3', 's4', 's2'], ['p222']],
             "answer": True,
             "explanation": 'Correct open set.'
         },
         {
-            "input": [['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 'p1', 'p1'], ['p111']],
+            "input": [['s4', 's1', 's9', 'p1', 's3', 's8', 's6', 's2', 's7', 's5', 'p1'], ['p111']],
             "answer": False,
             "explanation": 'Two many same tiles.'
         },
         {
-            "input": [['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 'p1', 'p1'], ['p1111']],
+            "input": [['s9', 'p1', 's7', 's8', 's6', 's3', 's1', 'p1', 's5', 's2', 's4'] ['p1111']],
             "answer": False,
             "explanation": 'Incorrect open set 2'
         },
         {
-            "input": [['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 'p1', 'p1'], ['p123']],
+            "input": [['p1', 's5', 's8', 's9', 's7', 's4', 's2', 's6', 's3', 's1', 'p1'], ['p123']],
             "answer": True,
             "explanation": 'Correct open set 2...'
         },
         {
-            "input": [['s1', 's2', 's3', 's4', 's5', 's6', 'p1', 'p1'], ['p123', 's789']],
+            "input": [['s2', 's1', 's6', 's4', 's3', 's5', 'p1', 'p1'], ['p123', 's789']],
             "answer": True,
             "explanation": 'Several open sets'
         },
         {
-            "input": [['s1', 's2', 's3', 's4', 's5', 's6', 'p1', 'p1'], ['p123', 's781']],
+            "input": [['s1', 's6', 'p1', 'p1', 's2', 's4', 's3', 's5'], ['p123', 's781']],
             "answer": True,
             "explanation": 'Incorrect several open sets'
         }
