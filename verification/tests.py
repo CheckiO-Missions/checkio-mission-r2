@@ -23,7 +23,7 @@ TESTS = {
         {
             "input": [['s9', 'p1', 'p1', 'm8', 'dw', 'dw', 'p8', 'm9', 'p7', 'p9', 's9', 'p1', 's9', 'm6']],
             "answer": False,
-            "explanation": 'There mustn't be alone tiles!'
+            "explanation": "There mustn't be alone tiles!"
         },
         {
             "input": [['dw', 'p7', 'p9', 'dw', 'm6', 'p8', 'm8', 'p1', 'p1', 'p1', 'm9'], ['s999']],
@@ -33,7 +33,7 @@ TESTS = {
         {
             "input": [['p1', 'p9', 'p1', 'p8', 'p1', 'm8', 'm7', 'p7', 'm9'], ['s999', 'dww']],
             "answer": False,
-            "explanation": 'Pair can't be open'
+            "explanation": "Pair can't be open"
         },
         {
             "input": [['s9', 'm2', 's9', 'p1', 'm6', 's3', 'm6', 'p5', 'm2', 'ww', 'ww', 'p1', 's3', 'p5']],
