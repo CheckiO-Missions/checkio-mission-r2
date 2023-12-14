@@ -26,7 +26,7 @@ TESTS = {
             "explanation": "There mustn't be alone tiles!"
         },
         {
-            "input": [['dw', 'p7', 'p9', 'dw', 'm6', 'p8', 'm8', 'p1', 'p1', 'p1', 'm9'], ['s999']],
+            "input": [['dw', 'p7', 'p9', 'dw', 'm7', 'p8', 'm8', 'p1', 'p1', 'p1', 'm9'], ['s999']],
             "answer": True,
             "explanation": 'Right hand'
         },
@@ -37,7 +37,7 @@ TESTS = {
         },
         {
             "input": [['s9', 'm2', 's9', 'p1', 'm6', 's3', 'm6', 'p5', 'm2', 'ww', 'ww', 'p1', 's3', 'p5'], []],
-            "answer": False,
+            "answer": True,
             "explanation": 'Yes, this is chitoisu!'
         }
     ],
@@ -94,7 +94,7 @@ TESTS = {
         },
         {
             "input": [['s1', 's6', 'p1', 'p1', 's2', 's4', 's3', 's5'], ['p123', 's781']],
-            "answer": True,
+            "answer": False,
             "explanation": 'Incorrect several open sets'
         }
     ]
