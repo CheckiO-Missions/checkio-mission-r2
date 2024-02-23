@@ -1,0 +1,38 @@
+<p>Deuxième partie de la série consacrée au jeu japonais "<a href="https://en.wikipedia.org/wiki/Japanese_mahjong ">riichi mahjong</a>". Il est un peu plus compliqué que le précédent.</p>
+
+<p>Votre tâche consiste à vérifier si la main est gagnante. Si, dans la mission précédente, vous avez reçu une main toute faite, dans celle-ci, il n'y aura qu'un ensemble de tuiles dans les données d'entrée, qui ne sera peut-être pas victorieux.</p>
+
+<p>Permettez-moi de vous rappeler les conditions de la victoire.</p>
+
+<ul>
+ <li>La main doit contenir exactement 14 tuiles.</li>
+ <li>La main doit contenir quatre ensembles (pon ou chi) et une paire.</li>
+</ul>
+
+<p>Dans cette mission, le deuxième argument de la fonction est ajouté - une liste d'<i>ensembles</i> dits <i>ouverts</i>. Dans le jeu, un tel ensemble est créé en enlevant une tuile que l'adversaire a rejetée parce qu'elle était inutile. L'ensemble qui a été complété par cette tuile est mis de côté et ne change plus. Notez que les paires ne peuvent pas être ouvertes.</p>
+
+<p>Chaque ensemble ouvert doit être vérifié pour déterminer s'il est valide ou non. Par exemple, "s456" est un jeu valide, et "m124" ou "p11" ne l'est pas.</p>
+
+<p>Une dernière remarque: il existe des exceptions à la deuxième condition de victoire. Il existe deux types de mains qui peuvent être gagnantes tout en ne contenant pas quatre jeux et une paire (dans un jeu réel, ces mains sont assez rares). Les voici:</p>
+<ul>
+ <li><i>Chitoisu. </i>Main qui contient sept paires. Par exemple:</li>
+    <pre class="brush: python">['p1', 'p1', 'p5', 'p5', 'm2', 'm2', 'm6', 'm6', 's3', 's3', 's9', 's9', 'ww', 'ww']</pre>
+    <p>Notez qu'il ne doit pas y avoir deux paires identiques dans la main.</p>
+ <li><i>Kokushi-muso. </i>Main qui contient un et neuf de chacune des couleurs, de chacun des dragons, de chacun des vents, et une paire de n'importe laquelle de ces tuiles. Par exemple:</li>
+ <pre class="brush: python">['m1', 'm9', 'p1', 'p1', 'p9', 's1', 's9', 'wn', 'we', 'ws', 'ww', 'dg', 'dr', 'dw']</pre>
+</ul>
+
+<p>
+   <strong>Données d'entrée: </strong> Deux arguments de type liste: le premier est une chaîne de caractères codant les tuiles, le second est une chaîne de caractères codant les ensembles ouverts (peut être vide).
+</p>
+
+<p>
+   <strong>Données de sortie: </strong> Une variable de type bool: la réponse à la question "la main est-elle prête?".
+</p>
+
+<p> 
+    <strong>Exemple: </strong>
+</p>
+<pre class="brush: python">
+    riichi_mahjong_win_hand(['m1', 'm2', 'm3', 'm5', 'm5', 'p2', 'p3', 'p4', 'p7', 'p8', 'p9'], ['s456']) == True
+</pre>
