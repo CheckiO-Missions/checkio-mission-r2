@@ -1,0 +1,38 @@
+<p>Druga część serii poświęconej japońskiej grze "<a href="https://en.wikipedia.org/wiki/Japanese_mahjong ">riichi mahjong</a>". Jest ona nieco bardziej skomplikowana niż poprzednia.</p>
+
+<p>Państwa zadaniem jest sprawdzenie, czy układ jest zwycięski. Jeśli w poprzedniej misji otrzymali Państwo gotowy układ, to w tej będzie tylko zestaw płytek w danych wejściowych, który może nie być zwycięski.</p>
+
+<p>Proszę pozwolić mi przypomnieć warunki zwycięstwa.</p>
+
+<ul>
+ <li>W układzie powinno znajdować się dokładnie 14 kamieni.</li>
+ <li>Układ musi zawierać cztery zestawy (pon lub chi) i jedną parę.</li>
+</ul>
+
+<p>W tej misji dodawany jest drugi argument funkcji - lista tak zwanych <i>zestawów</i> otwartych. Taki zestaw w grze jest tworzony poprzez zabranie kamienia, który przeciwnik odrzucił jako niepotrzebny. Zestaw, który został uzupełniony tym kamieniem, jest odkładany na bok i nie ulega już zmianie. Proszę zauważyć, że pary nie mogą być otwarte.</p>
+
+<p>Każdy z otwartych zestawów musi zostać sprawdzony, czy jest prawidłowy. Na przykład "s456" jest prawidłowym zestawem, a "m124" lub "p11" jest nieprawidłowy.</p>
+
+<p>Jeszcze jedna uwaga: istnieją wyjątki od drugiego warunku zwycięstwa. Istnieją dwa rodzaje układów, które mogą być zwycięskie i jednocześnie nie zawierać czterech setów i pary (w prawdziwej grze takie układy są dość rzadkie). Oto one:</p>
+<ul>
+ <li><i>Chitoisu. </i>Układ, który zawiera siedem par. Na przykład:</li>
+    <pre class="brush: python">['p1', 'p1', 'p5', 'p5', 'm2', 'm2', 'm6', 'm6', 's3', 's3', 's9', 's9', 'ww', 'ww']</pre>
+    <p>Proszę zauważyć, że w układzie nie powinno być dwóch identycznych par.</p>
+ <li><i>Kokushi-muso. </i>Układ, w którym znajduje się jeden i dziewięć z każdego koloru, każdy ze smoków, każdy z wiatrów oraz para do każdego z tych kamieni. Na przykład:</li>
+ <pre class="brush: python">['m1', 'm9', 'p1', 'p1', 'p9', 's1', 's9', 'wn', 'we', 'ws', 'ww', 'dg', 'dr', 'dw']</pre>
+</ul>
+
+<p>
+   <strong>Dane wejściowe: </strong> Dwa argumenty typu lista: pierwszy to ciągi znaków kodujące płytki, drugi to ciągi znaków kodujące zbiory otwarte (mogą być puste).
+</p>
+
+<p>
+   <strong>Dane wyjściowe: </strong> Jedna zmienna typu bool: odpowiedź na pytanie "czy układ jest gotowy?".
+</p>
+
+<p> 
+    <strong>Przykład: </strong>
+</p>
+<pre class="brush: python">
+    riichi_mahjong_win_hand(['m1', 'm2', 'm3', 'm5', 'm5', 'p2', 'p3', 'p4', 'p7', 'p8', 'p9'], ['s456']) == True
+</pre>
