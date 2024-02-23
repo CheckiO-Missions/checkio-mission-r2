@@ -1,0 +1,38 @@
+<p>Der zweite Teil der Serie über das japanische Spiel "<a href="https://en.wikipedia.org/wiki/Japanese_mahjong ">riichi mahjong</a>". Es ist ein wenig komplizierter als das vorherige Spiel.</p>
+
+<p>Ihre Aufgabe ist es, zu überprüfen, ob das Blatt ein Gewinnblatt ist. Wenn Sie in der vorigen Mission ein fertiges Blatt erhalten haben, dann gibt es in dieser Mission nur eine Reihe von Spielsteinen in den Eingabedaten, die möglicherweise nicht siegreich sind.</p>
+
+<p>Ich möchte Sie an die Bedingungen für den Sieg erinnern.</p>
+
+<ul>
+ <li>Das Blatt muss genau 14 Spielsteine enthalten.</li>
+ <li>Die Hand muss vier Sets (pon oder chi) und ein Paar enthalten.</li>
+</ul>
+
+<p>In dieser Mission wird das zweite Argument der Funktion hinzugefügt - eine Liste von sogenannten <i>offenen Sets.</i> Ein solches Set entsteht im Spiel durch das Wegnehmen eines Plättchens, das der Gegner als unnötig abgeworfen hat. Die Menge, die durch dieses Plättchen ergänzt wurde, wird beiseite gelegt und verändert sich nicht mehr. Beachten Sie, dass Paare nicht offen sein können.</p>
+
+<p>Jedes der offenen Sets muss überprüft werden, ob es gültig ist oder nicht. Zum Beispiel ist 's456' ein gültiges Set und 'm124' oder 'p11' ist ungültig.</p>
+
+<p>Eine weitere Anmerkung: Es gibt Ausnahmen von der zweiten Siegbedingung. Es gibt zwei Arten von Blättern, die gewinnen können und gleichzeitig nicht vier Sätze und ein Paar enthalten (in einem echten Spiel sind diese Blätter recht selten). Hier sind sie:</p>
+<ul>
+ <li><i>Chitoisu. </i>Hand, die sieben Paare enthält. Ein Beispiel:</li>
+    <pre class="brush: python">['p1', 'p1', 'p5', 'p5', 'm2', 'm2', 'm6', 'm6', 's3', 's3', 's9', 's9', 'ww', 'ww']</pre>
+    <p>Beachten Sie, dass die Hand nicht zwei identische Paare enthalten darf.</p>
+ <li><i>Kokushi-muso. </i>Hand, die eine und neun aus jeder der Farben, jedem der Drachen, jedem der Winde und ein Paar zu einer dieser Figuren enthält. Zum Beispiel:</li>
+ <pre class="brush: python">['m1', 'm9', 'p1', 'p1', 'p9', 's1', 's9', 'wn', 'we', 'ws', 'ww', 'dg', 'dr', 'dw']</pre>
+</ul>
+
+<p>
+   <strong>Eingabedaten: </strong> Zwei Argumente vom Typ Liste: Das erste sind Strings, die Kacheln kodieren, das zweite sind Strings, die offene Mengen kodieren (können leer sein).
+</p>
+
+<p>
+   <strong>Ausgabedaten: </strong> Eine Variable vom Typ bool: die Antwort auf die Frage "Ist die Hand bereit?".
+</p>
+
+<p> 
+    <strong>Beispiel: </strong>
+</p>
+<pre class="brush: python">
+    riichi_mahjong_win_hand(['m1', 'm2', 'm3', 'm5', 'm5', 'p2', 'p3', 'p4', 'p7', 'p8', 'p9'], ['s456']) == True
+</pre>
